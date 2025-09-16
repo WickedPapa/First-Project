@@ -47,22 +47,41 @@ for k in lista_keys:
     print(dizionario_2)
 ############################################
 print("\nESERCIZIO 5")
-original_list = input("inserisci una lista di num separati da virgole: ").replace(" ", "").split(",")
-for el in original_list:
-    el = int(el)
+
+
+def _parse_numeric_input(prompt: str) -> list[int]:
+    """Return a list of integers parsed from a comma separated input string."""
+
+    raw_values = input(prompt)
+    cleaned_values: list[int] = []
+    for raw_value in raw_values.replace(" ", "").split(","):
+        if not raw_value:
+            continue
+        try:
+            cleaned_values.append(int(raw_value))
+        except ValueError as exc:
+            raise ValueError(
+                f"Il valore '{raw_value}' non è un numero intero valido."
+            ) from exc
+    return cleaned_values
+
+
+original_list = _parse_numeric_input(
+    "inserisci una lista di num separati da virgole: "
+)
 cleaned_set = set(original_list)
 print("original list: ", sorted(original_list))
 print("cleaned set: ", sorted(cleaned_set))
 ############################################
 print("\nESERCIZIO 6")
-list_1 = input("inserisci una lista di num separati da virgole: ").replace(" ", "").split(",")
-for el_1 in list_1:
-    el_1 = int(el_1)
-list_2 = input("inseriscine un'altra e ti dirò intersezione, unione e differenze tra le 2: ").replace(" ", "").split(",")
-for el_2 in list_2:
-    el_2 = int(el_2)
-cleaned_set_1 = (set(list_1))
-cleaned_set_2 = (set(list_2))
+list_1 = _parse_numeric_input(
+    "inserisci una lista di num separati da virgole: "
+)
+list_2 = _parse_numeric_input(
+    "inseriscine un'altra e ti dirò intersezione, unione e differenze tra le 2: "
+)
+cleaned_set_1 = set(list_1)
+cleaned_set_2 = set(list_2)
 print("union: ", cleaned_set_1 | cleaned_set_2)
 print("intersection: ", cleaned_set_1 & cleaned_set_2)
 print("difference lista 1 - lista 2: ", cleaned_set_1 - cleaned_set_2)
