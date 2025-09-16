@@ -62,7 +62,7 @@ def _parse_numeric_input(prompt: str) -> list[int]:
         except ValueError as exc:
             raise ValueError(
                 f"Il valore '{raw_value}' non è un numero intero valido."
-            ) from exc
+            ) from exc #con from exc mantengo anche lo stack trace originale
     return cleaned_values
 
 
