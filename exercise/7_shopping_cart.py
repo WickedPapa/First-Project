@@ -90,6 +90,5 @@ def exec_menu(items: Sequence[MenuItem]) -> None:
         if not action():
             break
 
-
 if __name__ == "__main__":
     exec_menu(MAIN_MENU)
