@@ -7,7 +7,7 @@ MAIN_MENU_VOICES : list[str] = [
 CART_MENU_VOICES : list[str] = [
     "Show cart",
     "Complete order",
-    "Clear cart"
+    "Clear cart",
     "Go back"
 ]
 
