@@ -95,7 +95,7 @@ def complete_order() -> bool:
                 print("Inserisci un importo valido (e.g. 23.30, 10, 0.50, ecc...)\n")
                 continue
             if cash < tot:
-                print("Purtroppo non hai abbastanza soldi per pagare. Prova a rimuovere qualcosa dal carello.\n")
+                print("Purtroppo non hai abbastanza soldi per pagare. Prova a rimuovere qualcosa dal carello!\n")
                 return True
             print("\nOrdine completato! Grazie per l'acquisto.")
             print(f"Resto: {cash - tot}")
