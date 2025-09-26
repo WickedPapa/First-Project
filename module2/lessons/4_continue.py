@@ -5,10 +5,3 @@ for num in lista_numeri:
         continue #mi permette di saltare un giro, si usa solo in particolari casi
     if num % 2 == 0:
         print(num)
-
-
-input_str = ["aasfua", "paolo", "nome", "ciccionello", "brigido"]
-
-dict_gen = { k:len(k) for k in input_str }
-
-print(dict_gen)
