@@ -7,15 +7,19 @@ generatore_numeri_pari = (num for num in numeri if num % 2 == 0)
 for i in generatore_numeri_pari:
     print(i)
 
+print("")
 print("////////////////////////////////////////////////////////////////////////////")
+print("")
+
 def genera_numeri_pari(numeri):
     for num in numeri:
         if num % 2 == 0:
             yield num #ogni volta che si arriva qui l'esecuzione si ferma finchè il valore non viene consumato.
+            #guarda in debug
 
 generatore_numeri_pari_definito_tramite_funzione = genera_numeri_pari(numeri)
 
-print(next(generatore_numeri_pari_definito_tramite_funzione))
+print(next(generatore_numeri_pari_definito_tramite_funzione)) #stampa il prossimo valore nel generatore.
 
 for i in generatore_numeri_pari_definito_tramite_funzione:
     print(i)
