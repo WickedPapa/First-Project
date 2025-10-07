@@ -13,6 +13,9 @@ class Studente:
     def scheda_personale(self):
         return f"Nome: {self.nome} Cognome: {self.cognome} Corso: {self.corso_di_studi}"
 
+    def studia(self):
+        print(f"Lo studente {self.nome} sta studiando")
+
 studente1 = Studente("Paolo", "Montano", "Corso Python")
 studente2 = Studente("Mario", "Rossi", "Corso Cucina")
 
@@ -20,3 +23,5 @@ print(studente1.scheda_personale())
 print(studente2.scheda_personale())
 
 print(studente1.ore_presenza) #stampa 2 perchè quella variabile di classe viene aumentata di uno ogni volta che uno studente viene creato
+
+studente1.studia()
