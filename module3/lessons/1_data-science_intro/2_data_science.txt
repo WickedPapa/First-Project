@@ -29,8 +29,7 @@ considerazione. Possono essere anche errori.
 CORRELAZIONE e CAUSALITA'
 una correlazione tra due variabili non implica che una causi l'altra.
 e.g. l'aumento delle vendite di gelati e dei casi di annegamento in estate SONO CORRELATI ma NON C'E' CAUSALITA'.
-    Entrambe infatti dipendono dall'aumento della temperatura.
-    Di conseguenza non ha senso metterle nello stesso modello.
+Entrambe infatti dipendono dall'aumento della temperatura. Di conseguenza non ha senso metterle nello stesso modello.
 
 COLLINEARITA'
 Quando 2 (o più) variabili indipendenti sono fortemente correlate tra loro.
