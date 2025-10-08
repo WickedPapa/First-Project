@@ -57,11 +57,20 @@ di valori) si verifica
 DISTRIBUZIONE NORMALE (GAUSSIANA O DI GAUSS):
 -è la forma più frequente in cui si distribuiscono i dati dei fenomeni reali
 -è quella sulla quale si basano la maggior parte dei modelli di data science
+-distribuzione continua a forma di campana, centrata sulla media, simmetrica.
+-media, mediana e moda coincidono
 
 ALTRE DISTRIBUZIONI:
--uniforme
--binomiale
--poisson
--esponenziale
+Uniforme: tutti i valori in un intervallo hanno la stessa probabilità.
+Binomiale: distribuzione discreta che descrive il numero di successi in un certo numero di prove indipendenti (esito “successo/fallimento”).
+Poisson: distribuzione discreta che misura il numero di eventi rari in un intervallo di tempo o spazio fissato.
+Esponenziale: distribuzione continua che descrive il tempo che intercorre tra due eventi successivi di un processo di Poisson.
+
+ESEMPI:
+Normale: l’altezza delle persone in una popolazione. (media, mediana e moda coincidono)
+Uniforme: il risultato di estrarre a caso un numero tra 1 e 10 con uguale probabilità.
+Binomiale: il numero di “testa” ottenute lanciando una moneta 10 volte.
+Poisson: il numero di chiamate ricevute da un call center in un minuto.
+Esponenziale: il tempo che passa tra due chiamate successive al call center.
 -----------------------------------------------------------------------------------------------------------------------
 
