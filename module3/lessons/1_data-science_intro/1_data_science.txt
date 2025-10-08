@@ -74,3 +74,15 @@ Poisson: il numero di chiamate ricevute da un call center in un minuto.
 Esponenziale: il tempo che passa tra due chiamate successive al call center.
 -----------------------------------------------------------------------------------------------------------------------
 
+TEOREMA DEL LIMITE CENTRALE (TCL)
+La media di molti campioni indipendenti di una stessa popolazione tende a seguire una distribuzione normale,
+anche se la popolazione di partenza non è normale.
+
+Ovvero:
+Se prendi tanti campioni a caso da qualunque popolazione e ne calcoli la media,
+la distribuzione di queste medie sarà quasi normale.
+
+Esempio:
+Lanci un dado molte volte e calcoli la media dei risultati ogni 10 lanci
+    → le medie ottenute formano una curva a campana.
+-----------------------------------------------------------------------------------------------------------------------

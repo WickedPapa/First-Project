@@ -1,0 +1,40 @@
+MODELLI LINEARI
+
+sono un modo per descrivere la relazione tra una VARIABILE DIPENDENTE (quella che vogliamo studiare)
+e una o più VARIABILI INDIPENDENTI (quelle che usiamo per vare la previsione)
+
+Le VARIABILI INDIPENDENTI sono dette anche:
+-REGRESSORI
+-FUTURES
+-----------------------------------------------------------------------------------------------------------------------
+
+e.g.
+
+y = β0 + β1x1 + β2x2 + ... + βnxn + ε
+
+-y è la VARIABILE DIPENDENTE (prezzo casa)
+-x1, x2, ... , xn sono le "VARIABILI INDIPENDENTI" (metri quadri, zona, ecc)
+-β0 è detto INTERCETTA ed è il valore che assume y di base
+-β1, β2, ... , βn sono i coefficienti e rappresentano "quanto" ogni variabile influisce su y
+-ε (epsilon) è detto "TERMINE D'ERRORE" o "RESIDUO" e racchiude tutte quelle variabili che
+    non è stato possibile inserire nel modello (vicinanza ferrovia, ecc) e anche quelle che non sono prevedibili (covid,
+    guerra, ecc)
+-----------------------------------------------------------------------------------------------------------------------
+
+OUTLIER casi molto sporadici e distanti dai casi reali (per esempio il prezzo medio delle case a Palermo è
+250.000 mila euro ma una casa è stata venduta a 5 euro). Spesso si tratta di casi che conviene non prendere in
+considerazione. Possono essere anche errori.
+-----------------------------------------------------------------------------------------------------------------------
+
+CORRELAZIONE e CAUSALITA'
+una correlazione tra due variabili non implica che una causi l'altra.
+e.g. l'aumento delle vendite di gelati e dei casi di annegamento in estate SONO CORRELATI ma NON C'E' CAUSALITA'.
+    Entrambe infatti dipendono dall'aumento della temperatura.
+    Di conseguenza non ha senso metterle nello stesso modello.
+
+COLLINEARITA'
+Quando 2 (o più) variabili indipendenti sono fortemente correlate tra loro.
+In questo caso il modello può diventare instabile.
+Soluzioni:
+    -trovare la variabile che causa la variazione delle altre (nell'esempio sopra è l'aumento della temperatura)
+    -altrimenti lascio solo una delle variabili in questione nel modello (altrimenti sto dando più volte la stessa info)
