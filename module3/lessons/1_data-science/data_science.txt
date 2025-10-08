@@ -1,0 +1,67 @@
+La DATA SCIENCE è sostanzialmente la STATISTICA applicata al mondo dell'informatica.
+-----------------------------------------------------------------------------------------------------------------------
+
+Statistica DESCRITTIVA:
+-serve a riassumere e descrivere i dati
+-esempio: calcolare la media dei voti di una classe
+
+Statistica INFERENZIALE:
+-serve a fare previsioni o conclusioni su un grande gruppo di dati partendo da un campione.
+-esempio: studiare  l'opinione di 100 persone per capire cosa pensa l'intera città
+-----------------------------------------------------------------------------------------------------------------------
+
+La POPOLAZIONE è l'insieme completo degli elementi interessati dal fenomeno
+
+Il CAMPIONE STATISTICO è un sottoinsieme della popolazione selezionato per rappresentarla
+-----------------------------------------------------------------------------------------------------------------------
+
+MEDIA: somma valori divisi per numero totale
+MEDIANA: valore centrale di un insieme di dati ordinati. Se i dati sono in numero pari, la mediana e la media dei 2
+valori centrali.
+e.g. per 3,5,7,9 la mediana è 6
+MODA: il valore che appare più frequentemente in un insieme di dati
+e.g per 2,3,3,5,7 la moda è 3
+-----------------------------------------------------------------------------------------------------------------------
+
+VARIANZA:
+-misura della dispersione dei dati rispetto alla media
+-media delle differenze tra la media e i singoli valori
+-nella VARIANZA POPOLAZIONE quando si calcola la media si divide per N dove N è
+il numero totale di elementi
+-nella VARIANZA CAMPIONE quando si calcola la media si divide per N-1 dove N è
+il numero totale di elementi
+-se la varianza è bassa i valori sono concentrati vicino alla media
+-se la varianza è alta i valori sono molto dispersi rispetto alla media
+
+DEVIAZIONE STANDARD:
+-radice quadrata della varianza
+-indica quanto i dati si discostano in media dalla media stessa
+-----------------------------------------------------------------------------------------------------------------------
+
+VARIABILI DISCRETE:
+-variabili che assumono solo valori specifici, di solito numeri interi.
+-non possono avere valori intermedi tra due numeri
+-e.g. età
+
+VARIABILI CONTINUE:
+-variabili che possono assumere un numero infinito di valori all'interno di un intervallo.
+-possono avere qualsiasi valore reale
+-e.g. peso
+-----------------------------------------------------------------------------------------------------------------------
+
+DISTRIBUZIONE:
+-ci mostra come i dati si comportano nel loro insieme e indica quante volte un valore (o un intervallo
+di valori) si verifica
+-quando raccogliamo i dati reali, questi tendono a organizzarsi secondo delle "forme" (funzioni)
+
+DISTRIBUZIONE NORMALE (GAUSSIANA O DI GAUSS):
+-è la forma più frequente in cui si distribuiscono i dati dei fenomeni reali
+-è quella sulla quale si basano la maggior parte dei modelli di data science
+
+ALTRE DISTRIBUZIONI:
+-uniforme
+-binomiale
+-poisson
+-esponenziale
+-----------------------------------------------------------------------------------------------------------------------
+
