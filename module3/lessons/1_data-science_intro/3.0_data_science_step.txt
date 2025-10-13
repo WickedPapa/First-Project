@@ -1,0 +1,40 @@
+La data science è un campo che combina statistica e informatica.
+Si occupa di raccogliere, analizzare e interpretare dati.
+
+OBIETTIVI:
+-descrivere: capire cosa è successo in un contesto specifico
+-predire: fare previsioni su eventi futuri basate su dati passati
+-prescrivere: suggerire azioni da intraprendere
+
+ESEMPI:
+traffico su google maps, raccomandazioni su netflix, suggerimenti di acquisto su amazon
+-----------------------------------------------------------------------------------------------------------------------
+
+STEP:
+
+1) RACCOLTA DATI
+    -acquisire dati provenienti da varie fonti (excel, dataframe, immagini, ecc)
+
+2) PRE-PROCESSING
+    -EDA: esplorazione dati a disposizione tramite
+    tecniche di manipolazione (eliminiamo ad esempio il simbolo dell'euro da una lista di importi) e
+    data visualization (capiamo la ditribuzione)
+    -Pulizia: rimuovere errori, valori mancanti e inconsistenze (missing value, outliers)
+    (capiamo se ci sono correlazioni tra le variabili)
+
+3) FEATURE ENGINEERING
+    -identificare e trasformare caratteristiche (variabili) che migliorano le prestazioni del modello (semplificare e
+    ottimizzare il modello)
+
+4) MODELLAZIONE
+    -addestrare un modello statistico o di machine learning/deep learning per effettuare previsioni o classificazioni
+    (previsione: ad esempio il prezzo di una casa)
+    (classificazione: determinare se l'immagine presenta un cane o un gatto)
+    (classificazione multipla: capire la razza del cane dall'immagine)
+    (classificazione multi-label: capire il tema di un articolo di giornale tenendo conto che
+    lo stesso articolo di giornale può trattare più temi tipo politica ed economia)
+
+5) VALUTAZIONE
+    -interpretare i risultati e prendere decisioni informate
+-----------------------------------------------------------------------------------------------------------------------
+

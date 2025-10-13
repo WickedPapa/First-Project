@@ -1,0 +1,33 @@
+DATI STRUTTURATI
+Sono dati organizzati in righe e colonne (db relazionali, fogli excel, ecc)
+Sono i più facili da analizzare usando librerie di Python come Pandas, Numpy, Matplotlib
+
+DATI NON STRUTTURATI
+Dati che non hanno struttura predefinita, come testo, immagini, audio, video
+Richiedono tecniche di analisi complesse come NLP (Natural Language Processing) e/o visione artificiale
+
+DATI SEMI-STRUTTURATI
+Dati che non sono completamente strutturati, ma possiedono qualche formato organizzato (tag XML, JSON, log dei server)
+Possono essere analizzati tramite strumenti come Python o NoSQL databases
+-----------------------------------------------------------------------------------------------------------------------
+
+FONTI DATI
+
+DATABASE
+-relazionali: MySQL, PostgreSQL
+-NoSQL: MongoDB, Cassandra
+
+FILE CSV/EXCEL/FOGLI
+-facili da utilizzare
+-usati per importare ed esportare dati da e verso applicazioni
+
+API
+-accesso ai dati tramite API
+
+SENSORI E DISPOSITIVI
+-dati raccolti da sensori, come temperatura, umidità
+-cruciali per applicazioni come monitoraggio ambientale e industria 4.0
+
+SOCIAL MEDIA
+-dati provenienti da piattaforme come Facebook, Instagram, Twitter, ecc
+-utilizzati per analisi si sentiment, marketing e comportamento utenti

@@ -1,0 +1,15 @@
+SUPERVISED LEARNING
+-dati etichettati: dati in input associati ad etichette di output (target)
+-obiettivo: imparare una funzione che mappa gli input sugli output per predire o classificare nuovi dati
+-fase di allenamento: l'algoritmo utilizza i dati etichettati per "imparare" la relazione tra input e output
+-esempi:
+    -classificazione: riconoscimento immagini (cane vs gatto)
+    -regressione: previsione prezzo casa
+
+UNSUPERVISED LEARNING
+-dati non etichettati: non ci sono etichette di output. L'algoritmo cerca pattern e strutture senza supervisione
+-obiettivo: scoprire pattern nascosti o raggruppamenti nei dati, senza una previsione esplicita
+-fase di allenamento: l'algoritmo esplora i dati per trovare correlazioni, raggruppamenti e relazioni
+-esempi
+    -clustering: segmentazione clienti in gruppi simili (es. marketing)
+

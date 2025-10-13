@@ -1,0 +1,25 @@
+PRE PROCESSING
+
+EDA: è il primo passo fondamentale nell'analisi dei dati. Consiste nell'esplorare, riassumere, visualizzare i dati
+per comprenderne struttura, pattern e anomalie
+
+OBIETTIVI EDA:
+-individuare errori nei dati (missing values, outlier,  incoerenze)
+-comprendere la distribuzione delle variabili
+-identificare relazioni tra le variabili
+-generare ipotesi per i modelli di machine learning
+
+TECNICHE EDA:
+-statistiche descrittive (media, mediana, deviazione standard)
+-distribuzioni delle variabili (istogrammi, boxplot)
+-relazione tra variabili (scatter plot, heatmap di correlazione)
+-valori mancanti e outlier (controllo con tabelle e grafici)
+
+GESTIONE VALORI MANCANTI (None, NaN)
+-imputazione (media, mediana, moda)
+-eliminazione delle righe con valori mancanti
+-sostituzione con un valore predeterminato o interpolazione
+
+OUTLIER
+-un valore anomalo chiaramente distante dalle altre osservazioni
+-metodi di identificazione: grafico a scatola, distanza interquartile

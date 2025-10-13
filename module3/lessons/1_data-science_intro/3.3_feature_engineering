@@ -1,0 +1,167 @@
+FEATURE ENGINEERING - OVERVIEW
+
+Trasformazione dei dati grezzi in caratteristiche (features) che migliorano le prestazioni dei modelli
+di machine learning
+
+Fase fondamentale, una buona feature engineering può essere più efficace dell'uso di modelli complessi
+
+SOTTO TASK:
+
+-creazione di nuove features:
+    -combinazione di variabili esistenti (fatturato = prezzo unitario x quantità venduta)
+    -aggregazioni temporali o spaziali (dati vendite settimanali possono diventare mensili o si può aggregare il dato
+    per categoria di prodotto)
+    -derivazione di nuove metriche (se abbiamo distanza percorsa e tempo impiegato possiamo calcolare la velocità)
+
+-trasformazione di features:
+    -scaling (es è modificare 2 variabile che esprimono uno stesso dato con diverse unità di misura affinché lo esprimano con la stessa unità di misura)
+        -normalizzazione: ridimensiona i dati in un intervallo specifico, tipicamente [0,1] o [-1,1]
+            -si usa quando i dati non seguono una distribuzione gaussiana (normale)
+        -standardizzazione: trasforma i dati in modo che abbiano una media pari a 0 e una deviazione standard pari a 1
+            -si usa quando i dati seguono una distribuzione gaussiana (o quasi)
+    -encoding (le stringhe per i modelli non hanno senso, vanno sempre trasformate in numeri)
+        -one-hot encoding: trasformare variabili categoriche in colonne binarie (può complicare il dataset perchè
+        aggiunge una nuova colonna per ogni valore di ogni categoria...)
+        -label encoding: assegnare un valore numerico a ciascuna categoria (usando numeri interi (es. rosso=0,
+        verde=1, blu=2), i modelli possono interpretarli come valori ordinali (cioè blu > verde > rosso),
+        anche se le categorie non hanno ordine naturale.)
+    -discretizzazione e binning (l'età si può discretizzare rendendola una variabile categorica ad esempio invece di
+    indicare l'età come numero la indico come categoria tipo neonato se età tra 0 e 3, bambino se età tra 3 e 11,
+    adolescente...ecc)
+
+-selezione delle features:
+    -filtraggio: basato su statistiche (varianza, correlazione) (tengo solo le variabili importanti e scarto quelle
+    ripetute)
+    -wrapper methods: forward/backword selection
+    -embedded methods:
+        -lasso regression (si può applicare solo a regressioni e serve a eliminare variabili inutili a priori)
+        -random forest feature importance (se mi accorgo che ho inserito una variabile
+        poco utile, rifaccio il modello rimuovendola)
+
+BEST PRACTICE:
+-comprendere il dominio del problema
+-evitare il leakage di informazioni
+-testare k0impatto delle feature con validazione incrociata
+
+ERRORI COMUNI
+-creazione di feature ridondanti
+-non normalizzare i dati quando necessario
+-trascurare le interazioni tra le variabili
+-----------------------------------------------------------------------------------------------------------------------
+
+Filter methods
+Sono tecniche di feature selection che valutano ogni variabile da sola, senza addestrare un modello.
+Usano solo misure statistiche (correlazione, test chi-quadrato, ANOVA, ecc.) per capire se una feature è utile a predire il target.
+
+Meccanismo
+
+Calcolano quanto una variabile è “legata” al target.
+Ordinano le feature in base a quella misura.
+Tengono solo le migliori (es. le prime 10).
+
+Esempi semplici
+Supponi di voler prevedere se uno studente passa o boccia in base a:
+ore_studio
+colore_maglietta
+numero_fotocopie
+
+Il filter method calcola la correlazione di ogni variabile col risultato:
+
+ore_studio → correlazione 0.85
+numero_fotocopie → 0.20
+colore_maglietta → 0.01
+
+Tiene solo ore_studio (alta correlazione).
+-----------------------------------------------------------------------------------------------------------------------
+
+Random Forest Feature Importance
+Serve a capire quali variabili contano di più per un modello Random Forest.
+Ogni albero della foresta prende decisioni basate su “split” (es. se età > 30 allora…). Ogni split riduce un po’ l’errore del modello (misurato con impurezze tipo Gini o entropia).
+La “feature importance” misura quanto ogni variabile ha contribuito in media a ridurre quell’errore.
+
+Esempio semplice
+Supponiamo di prevedere se una persona compra un’auto con queste variabili:
+
+età
+reddito
+ha_figli
+
+Il modello fa molti split e scopre che:
+reddito riduce spesso l’errore,
+età lo riduce un po’,
+ha_figli quasi mai.
+
+Output (importanza normalizzata):
+reddito: 0.6
+età: 0.3
+ha_figli: 0.1
+
+Significa che il modello si basa soprattutto sul reddito.
+-----------------------------------------------------------------------------------------------------------------------
+
+Wrapper methods
+Sono tecniche di feature selection che usano direttamente un modello per valutare quali variabili tenere o scartare.
+A differenza di Lasso (che seleziona con formule) o della feature importance (che misura peso a posteriori), i wrapper provano combinazioni di feature e vedono quale modello funziona meglio.
+
+Forward Selection
+Parti da 0 feature.
+Aggiungi ogni volta la variabile che migliora di più le performance (es. l’accuratezza).
+Ti fermi quando aggiungerne altre non migliora più.
+
+Backward Elimination
+Parti da tutte le feature.
+Togli ogni volta quella che peggiora meno le performance.
+Ti fermi quando toglierne altre riduce troppo l’accuratezza.
+
+Stepwise Selection
+Combina entrambe: aggiunge o rimuove feature a seconda dell’effetto sulle performance.
+
+Esempio intuitivo
+Supponi di voler prevedere il prezzo di una casa usando 5 variabili:
+[mq, stanze, anno, piano, colore_pareti]
+
+Forward selection:
+Testi ogni variabile singolarmente → mq dà il modello migliore → lo tieni.
+Provi tutte le coppie con mq → mq + stanze migliora → la tieni.
+Aggiungere anno non migliora → ti fermi.
+→ Risultato finale: usi solo mq e stanze.
+
+Backward elimination:
+Parti con tutte e 5.
+Rimuovi colore_pareti → modello quasi uguale.
+Rimuovi piano → modello peggiora.
+Ti fermi.
+→ Rimangono 4 variabili.
+-----------------------------------------------------------------------------------------------------------------------
+
+Lasso Regression
+È una regressione lineare che aggiunge una penalizzazione ai coefficienti troppo grandi per evitare overfitting.
+Lasso impone una penalità L1, cioè la somma dei valori assoluti dei coefficienti.
+Effetto: alcuni coefficienti diventano esattamente zero → la variabile viene “eliminata” dal modello.
+È quindi anche un metodo di selezione automatica delle feature.
+
+Esempio semplice
+Vogliamo prevedere il prezzo di una casa con:
+
+mq,
+numero_stanze,
+colore_delle_pareti.
+
+Con regressione normale potresti ottenere:
+prezzo = 2000*mq + 5000*numero_stanze + 100*colore_delle_pareti
+
+Con Lasso, se colore_delle_pareti non aiuta, il coefficiente può diventare 0:
+prezzo = 2100*mq + 4800*numero_stanze + 0*colore_delle_pareti
+
+Risultato: il modello ignora automaticamente le variabili irrilevanti.
+
+Confronto (Random Forest Feature Importance VS Lasso Regression)
+Random Forest Feature Importance -> Capire quanto conta ogni variabile
+Lasso Regression ->	Prevenire overfitting e selezionare feature	(rimuove automaticamente le altre impostando il coeff. a 0)
+-----------------------------------------------------------------------------------------------------------------------
+
+Confronto sintetico
+Metodo	                                Come decide	                Usa modello	    Elimina feature?	Costo computazionale
+Filter	                                Statistiche semplici        no              no                  basso
+Wrapper                                 Testa varie combinazioni	Sì(molti)       Sì	                Alto
+Embedded (es. Lasso, Random Forest)	    Durante l’allenamento	    Sì(una volta)   Sì (automatico)	    Medio

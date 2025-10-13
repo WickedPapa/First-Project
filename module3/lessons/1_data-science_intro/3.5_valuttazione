@@ -1,0 +1,23 @@
+VALUTAZIONE
+Misurare le prestazioni del modello per garantire che generalizzi bene su nuovi dati
+Un buon modello non è solo accurato sui dati di training, ma anche su dati mai visti prima!
+
+TIPI METRICHE
+-accuracy: percentuale previsioni corrette
+-precision: percentuale veri positivi tra quelli previsti come positivi
+-recall (sensibilità): percentuale veri positivi
+-F1-score: media armonica tra precision e recall
+
+TECNICHE DI VALIDAZIONE:
+-train/test split: suddivisione dei dati in training e test set
+-cross validation (k-fold) dividere i dati in K sottogruppi e validare su ogni combinazione
+
+OVERFITTING E UNDERFITTING
+-overfitting: il modello si adatta troppo ai dati di training e generalizza male
+-underfitting: il modello è troppo semplice e non cattura i pattern nei dati
+-soluzioni:
+    -usare più dati
+    -applicare regolarizzazione (L1,L2)
+    -selezionare feature rilevanti
+    -aumentare la complessità del modello solo quando necessario
+

@@ -1,0 +1,19 @@
+STRUMENTI E LINGUAGGI PER LA DATA SCIENCE
+
+Jupyter Notebook
+Ambiente interattivo per scrivere ed eseguire codice python
+
+Google Colab
+Versione clud di Jupyter, gratuita e con GPU disponibii
+
+VS Code / PyCharm
+IDE per scrivere codice in Python con strumenti avanzati
+
+Excel / Google Sheets
+Per analisi preliminare e manipolazione semplice di dati
+
+Tableau / Power BI
+Strumenti per creare dashboard interattive e report
+
+Apache Spark
+Per lavorare con Big Data e analisi distribuita
