@@ -1,0 +1,1 @@
+-dalla cartella del progetto lanciare "jupyter notebook"
