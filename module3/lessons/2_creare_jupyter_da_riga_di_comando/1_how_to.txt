@@ -1,0 +1,5 @@
+-mettersi nella cartella desiderata
+-creare una cartella per il progetto
+-spostarsi dentro la cartella
+-eseguire python -m venv venv (opppure python3)
+-pip install jupyter
