@@ -20,4 +20,3 @@ OVERFITTING E UNDERFITTING
     -applicare regolarizzazione (L1,L2)
     -selezionare feature rilevanti
     -aumentare la complessità del modello solo quando necessario
-

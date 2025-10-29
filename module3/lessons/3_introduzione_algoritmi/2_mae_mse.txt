@@ -1,0 +1,25 @@
+MAE (Mean Absolute Error)
+
+Misura l'errore medio assoluto tra le previsioni e i valori reali
+Più i valori sono bassi, più il modello è accurato
+
+Pro:
+-facile da interpretare, esprime l'errore medio in unità reali
+
+Contro:
+-tratta tutti gli errori allo stesso modo, non penalizza abbastanza quelli grandi
+-non è differenziabile in 0, il che può essere un problema per alcuni algoritmi di ottimizzazione
+----------------------------------------------------------------------------------------------------------
+
+MSE (Mean Squared error)
+
+Calcola la media dei quadrati degli errori, penalizzando maggiormente gli errori grandi
+Sensibile agli outlier a causa della penalizzazione quadratica
+
+Pro:
+-penalizza di più gli errori grandi, utile quando si vuole enfatizzare grosse deviazioni
+
+Contro:
+-sensibile agli outlier, un singolo errore molto grande può influenzare pesantemente il risultato
+-poiché gli errori vengono elevati al quadrato, il valore MSE non è direttamente interpretabile rispetto all'unità
+dei dati originali
