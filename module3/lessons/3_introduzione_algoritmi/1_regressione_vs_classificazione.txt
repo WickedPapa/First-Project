@@ -1,0 +1,36 @@
+Prima di tutto bisogna identificare il problema:
+-regressione
+-classificazione
+-----------------------------------------------------------------------------------------------------------------------
+
+REGRESSIONE
+Previsione di un valore continuo.
+Il modello apprende una relazione tra le variabili indipendenti (features) e una variabile dipendente (target) numerica
+-prevedere prezzo casa
+-stimare consumo energia in base al meteo ecc
+
+E' un metodo statistico che cerca di trovare una relazione tra una (o più) variabile indipendente x e una variabile
+indipendente y attraverso una linea retta
+
+y = b + mx + eps
+
+y = valore dipendente predetto
+x = valore indipendente
+m = pendenza retta (coefficiente angolare)
+b = intercetta (valore di y quando x è 0)
+eps = termine di errore
+
+PRO:
+-semplice da implementare e interpretare
+-utile per dati con relazione lineare
+
+CONTRO:
+-non funziona bene con relazioni non lineari
+-sensibile agli outlier (valori estremi)
+-----------------------------------------------------------------------------------------------------------------------
+
+CLASSIFICAZIONE
+Assegnare a una osservazione delle categorie discrete predefinite.
+Il modello impara a distinguere tra classi in base alle caratteristiche dei dati
+-identificare spam (binaria: 1 o 0)
+-riconoscere tipo di animale in un'immagine (multiclasse: cane, gatto, ecc...)
