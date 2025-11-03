@@ -1,0 +1,10 @@
+ACCURACY
+previsioni_corrette/totale_campioni
+
+Buona per dataset bilanciati ma problematica in caso contrario
+---------------------------------------------------------------------------------------------------
+
+PRECISION
+veri_positivi/(veri_positivi+falsi_positivi)
+
+Utile quando i falsi positivi sono critici ma può trascurare molti veri positivi se il recall è basso

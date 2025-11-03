@@ -1,0 +1,15 @@
+E' un modello statistico utilizzato per problemi di classificazione binaria ( e più in generale multi-classe)
+Il suo obiettivo è stimare la probabilità che una determinata osservazione appartenga a una delle 2 classi utilizzando
+una funzione SIGMOIDE per mappare i valori di input in un intervallo 0-1
+
+VANTAGGI:
+-interpretabilità
+-stabilità
+-probabilità come output
+-facile da regolarizzare L1 (Lasso) e L2 (Ridge) per evitare overfitting
+
+SVANTAGGI:
+-non gestisce bene dati non separabili
+-soffre in alta dimensionalità (con troppe features può overfittare)
+-non adatta a problemi di regressione
+-difficoltà con classi sbilanciate (se una classe è molto più frequente dell'altra, il modello può avere bias verso la classe dominante)
