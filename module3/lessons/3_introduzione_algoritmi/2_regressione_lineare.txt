@@ -1,0 +1,19 @@
+È un modello statistico utilizzato per problemi di regressione.
+Il suo obiettivo è stimare una relazione lineare tra una variabile dipendente continua e una o più variabili indipendenti, minimizzando la somma degli errori quadratici (criterio dei minimi quadrati).
+
+Assume che l’output sia una combinazione lineare delle feature:
+y = β0 ​+ β1​x1 ​+ ⋯ + βn​xn​
+
+VANTAGGI:
+-interpretabilità elevata (coefficiente = impatto marginale della feature)
+-soluzione chiusa tramite OLS (computazionalmente efficiente)
+-base teorica solida (inferenza statistica, intervalli di confidenza, test t, F-test)
+-facilmente regolarizzabile con L1 (Lasso) e L2 (Ridge)
+-buon baseline model
+
+SVANTAGGI:
+-assume relazione lineare tra input e output
+-sensibile agli outlier (minimizza errori quadratici)
+-richiede assunzioni statistiche (omoschedasticità, indipendenza, normalità degli errori per inferenza)
+-può soffrire di multicollinearità tra feature
+-non adatta a problemi di classificazione

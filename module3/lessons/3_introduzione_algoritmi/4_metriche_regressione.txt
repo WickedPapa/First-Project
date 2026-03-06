@@ -1,3 +1,6 @@
+Le metriche di valutazione della regressione misurano quanto sbagli in termini numerici
+
+----------------------------------------------------------------------------------------------------------
 MAE (Mean Absolute Error)
 
 Misura l'errore medio assoluto tra le previsioni e i valori reali

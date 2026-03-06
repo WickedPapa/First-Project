@@ -1,0 +1,37 @@
+Le metriche di valutazione della classificazione misurano quanto classifichi correttamente
+
+---------------------------------------------------------------------------------------------------
+ACCURACY
+previsioni_corrette / totale_campioni
+
+Buona per dataset bilanciati ma problematica in caso contrario (può essere fuorviante con classi sbilanciate).
+---------------------------------------------------------------------------------------------------
+PRECISION
+veri_positivi / (veri_positivi + falsi_positivi)
+
+Indica quanto sono affidabili le predizioni positive.
+Utile quando i falsi positivi sono critici, ma può trascurare molti veri positivi se il recall è basso.
+---------------------------------------------------------------------------------------------------
+RECALL (Sensitivity, True Positive Rate)
+veri_positivi / (veri_positivi + falsi_negativi)
+
+Indica quanto il modello riesce a catturare i casi positivi reali.
+Utile quando i falsi negativi sono costosi (es. diagnosi medica).
+---------------------------------------------------------------------------------------------------
+F1-SCORE
+2 · (precision · recall) / (precision + recall)
+
+Media armonica tra precision e recall.
+Bilancia entrambe le metriche ed è utile quando serve un compromesso tra falsi positivi e falsi negativi.
+---------------------------------------------------------------------------------------------------
+AUC-ROC
+Area sotto la curva ROC
+
+Misura la capacità del modello di distinguere tra le classi al variare della soglia decisionale.
+Valore compreso tra 0 e 1:
+
+0.5 → modello casuale
+
+1 → classificatore perfetto
+
+È indipendente da una singola soglia di classificazione.
